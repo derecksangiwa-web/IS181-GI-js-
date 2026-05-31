@@ -1,0 +1,377 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #0f2027, #2c5364);
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #00c6ff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    color: #2c5364;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FULL WIDTH */
+.full {
+    grid-column: span 2;
+}
+
+/* CARD */
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #2c5364;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* IMAGES */
+.images {
+    display: flex;
+    gap: 10px;
+}
+
+.images img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* LINKS */
+a {
+    color: #2c5364;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* BACK BUTTON */
+.back {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* ===== HOMEPAGE IMPROVEMENTS ===== */
+
+/* CENTER TEXT */
+.center-text {
+    text-align: center;
+}
+
+/* CENTER DIV */
+.center {
+    text-align: center;
+}
+
+/* CARD CONTAINER (HOMEPAGE) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* HOMEPAGE CARDS */
+.card-container .card {
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* CARD HOVER EFFECT */
+.card-container .card:hover {
+    transform: translateY(-8px);
+}
+
+/* CARD IMAGE */
+.card-container .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    color: white;
+    margin-top: 20px;
+}
+/* ===== SMOOTH PAGE LOAD ===== */
+.container {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== NAVBAR IMPROVEMENT ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== LINK HOVER EFFECT ===== */
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00c6ff;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ===== CARD SHADOW UPGRADE ===== */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== IMAGE HOVER EFFECT ===== */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== BUTTON STYLE (LINKS LIKE BUTTONS) ===== */
+.card a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: #2c5364;
+    color: white;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background: #0f2027;
+}
+
+/* ===== SCROLL SMOOTH ===== */
+html{
+    scroll-behavior:smooth;
+}
+/* ==========================
+   JAVASCRIPT FEATURES
+========================== */
+
+/* Hidden elements */
+.hidden{
+    display:none;
+}
+
+/* Skills Toggle */
+.skill-item{
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.skill-details{
+    margin-top:5px;
+    padding:8px;
+    background:#e8f1f5;
+    border-radius:5px;
+}
+
+/* Read More / Read Less */
+.collapsed{
+    max-height:50px;
+    overflow:hidden;
+}
+
+.expanded{
+    max-height:none;
+}
+
+/* Scroll To Top Button */
+#topBtn{
+    display:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    background:#2c5364;
+    color:white;
+    cursor:pointer;
+    z-index:1000;
+}
+
+#topBtn:hover{
+    background:#0f2027;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .container{
+    background:#333;
+    color:white;
+}
+
+.dark-mode .card{
+    background:#444;
+    color:white;
+}
+
+.dark-mode table{
+    color:white;
+}
+
+.dark-mode td{
+    border-color:#666;
+}
+.dark-mode th{
+    background:#555;
+}
+.dark-mode .navbar{
+    background:#111;
+}
+/* Lightbox */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:2000;
+}
+
+.lightbox{
+    text-align:center;
+}
+
+.lightbox-img{
+    max-width:80%;
+    max-height:80vh;
+    border-radius:10px;
+}
+
+#closeLightbox{
+    margin-top:10px;
+    padding:10px 20px;
+    border:none;
+    background:#2c5364;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#closeLightbox:hover{
+    background:#0f2027;
+}
+
+/* Contact Form Errors */
+.error{
+    color:red;
+    font-size:14px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* Digital Clock */
+.clock{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#2c5364;
+}
+
+/* Typewriter Message */
+.typewriter{
+    text-align:center;
+    font-size:18px;
+    width:80%;
+    margin:auto;
+    min-height:60px;
+}
